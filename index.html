@@ -19,7 +19,7 @@
         <h3 class="mb-4">Ingeniería del Software 2 - Profesor Javier Molina</h3>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex flex-column align-items-center">
                 <label for="iphoneModel">Selecciona un modelo de iPhone:</label>
                 <select class="form-control" id="iphoneModel">
                     <option value="SE">iPhone SE</option>
@@ -30,7 +30,7 @@
                 <button class="btn btn-primary" onclick="crearProducto1()">Crear Producto iPhone</button>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex flex-column align-items-center">
                 <label for="ipadModel">Selecciona un modelo de iPad:</label>
                 <select class="form-control" id="ipadModel">
                     <option value="Air">iPad Air</option>
@@ -39,11 +39,10 @@
                 </select>
                 <br>
                 <button class="btn btn-success" onclick="crearProducto2()">Crear Producto iPad</button>
-                
             </div>
         </div>
 
-        <div id="resultado" class="mt-4"></div>
+        <div id="resultado" class="mt-4 d-flex justify-content-around flex-wrap"></div>
     </div>
     
     <!-- Agrega los enlaces a Bootstrap y al final de tu HTML -->

@@ -1,5 +1,3 @@
-// script.js
-
 class ProductoIphone {
     constructor(modelo) {
         this.modelo = modelo;
@@ -59,17 +57,19 @@ function mostrarImagen(modelo, imagenId) {
     }
 }
 
-function mostrarResultado(producto) {
+function mostrarResultado(producto, modelo) {
     const resultadoDiv = document.getElementById('resultado');
     resultadoDiv.innerHTML += `<p>Modelo: ${producto.modelo}</p>`;
 
+    // Agregar la imagen al resultado
+    resultadoDiv.innerHTML += `<img src="img/${modelo.toLowerCase()}.jpg" alt="${modelo}">`;
 }
 
 function crearProducto1() {
     const modeloIphone = document.getElementById('iphoneModel').value;
     const factoria = new AppleFactoria();
     const iphone = factoria.obtenerIphone().crearProducto(modeloIphone);
-    mostrarResultado(iphone);
+    mostrarResultado(iphone, modeloIphone);
     console.log("Iphone Creado: IPhone " + modeloIphone);
 }
 
@@ -77,6 +77,6 @@ function crearProducto2() {
     const modeloIpad = document.getElementById('ipadModel').value;
     const factoria = new AppleFactoria();
     const ipad = factoria.obtenerIpad().crearProducto(modeloIpad);
-    mostrarResultado(ipad);
+    mostrarResultado(ipad, modeloIpad);
     console.log("Ipad Creado: IPad " + modeloIpad);
 }

@@ -7,6 +7,7 @@ body {
 h1, h2, h3 {
     font-family: 'SF Pro Display', sans-serif; /* Utiliza la fuente principal para h1, h2, h3 */
 }
+
 label {
     margin-top: 10px;
 }
@@ -22,4 +23,12 @@ button {
 
 #resultado {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Agrega estas reglas para ajustar el tamaño de las imágenes al 50% */
+#resultado img {
+    width: 10%;
 }
