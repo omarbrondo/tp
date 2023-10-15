@@ -1,36 +1,38 @@
 class ProductoIphone {
     constructor(modelo) {
         this.modelo = modelo;
-        console.log("El modelo de Iphone elegido es: " + this.modelo);
+        console.log("estoy en la clase ProductoIphone y llamo al contructor, le paso el modelo " + this.modelo);
     }
 }
 
 class ProductoIpad {
     constructor(modelo) {
         this.modelo = modelo;
-        console.log("El modelo de Ipad elegido es: " + this.modelo);
+        console.log("estoy en la clase ProductoIpad y llamo al contructor, le paso el modelo " + this.modelo);
     }
 }
 
 class IphoneFactoria {
     crearProducto(modelo) {
-        console.log("Llamado de la clase IphoneFactoria");
+        console.log("Llamado de la clase IphoneFactoria, voy a crear el Iphone");
         return new ProductoIphone(modelo);
     }
 }
 
 class IpadFactoria {
     crearProducto(modelo) {
-        console.log("Llamado de la clase IpadFactoria");
+        console.log("Llamado de la clase IpadFactoria, voy a crear el Ipad");
         return new ProductoIpad(modelo);
     }
 }
 
 class AppleFactoria {
     constructor() {
-        this.productoIphone = new IphoneFactoria();
-        this.productoIpad = new IpadFactoria();
         console.log("Llamado de la clase AppleFactoria");
+        this.productoIphone = new IphoneFactoria();
+        console.log("Creo un objeto del tipo IphoneFactoria() y lo llamo productoIphone");
+        this.productoIpad = new IpadFactoria();
+        console.log("Creo un objeto del tipo IpadFactoria() y lo llamo productoIpad");
     }
 
     obtenerIphone() {
@@ -70,7 +72,9 @@ function mostrarResultado(producto, modelo) {
 
 function crearProducto1() {
     const modeloIphone = document.getElementById('iphoneModel').value;
+    console.log("voy a crear el producto, declaro la variable modeloIphone y el modelo es: " + modeloIphone)
     const factoria = new AppleFactoria();
+    console.log("Se creo una constante factoria del tipo AppleFactoria (para Iphone)");
     const iphone = factoria.obtenerIphone().crearProducto(modeloIphone);
     mostrarResultado(iphone, modeloIphone);
     console.log("Iphone Creado: IPhone " + modeloIphone);
@@ -79,6 +83,7 @@ function crearProducto1() {
 function crearProducto2() {
     const modeloIpad = document.getElementById('ipadModel').value;
     const factoria = new AppleFactoria();
+    console.log("Se creo una constante factoria del tipo AppleFactoria (para Ipad)");
     const ipad = factoria.obtenerIpad().crearProducto(modeloIpad);
     mostrarResultado(ipad, modeloIpad);
     console.log("Ipad Creado: IPad " + modeloIpad);
