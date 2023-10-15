@@ -1,0 +1,25 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif; /* Fallback en caso de que la fuente principal no se cargue */
+}
+
+h1, h2, h3 {
+    font-family: 'SF Pro Display', sans-serif; /* Utiliza la fuente principal para h1, h2, h3 */
+}
+label {
+    margin-top: 10px;
+}
+
+select {
+    width: 200px;
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#resultado {
+    margin-top: 20px;
+}
