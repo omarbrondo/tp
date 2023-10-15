@@ -30,5 +30,13 @@ button {
 
 /* Agrega estas reglas para ajustar el tamaño de las imágenes al 50% */
 #resultado img {
-    width: 10%;
+    width: 40%;
+}
+
+#resultado > div {
+    border: 1px solid #ddd; /* Color del borde */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px; /* Margen externo */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo gris claro */
 }
