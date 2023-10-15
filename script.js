@@ -44,25 +44,26 @@ class AppleFactoria {
     }
 }
 
-// Mueve la función mostrarImagen arriba para que esté definida antes de ser utilizada
-function mostrarImagen(modelo, imagenId) {
-    // Verifica si el elemento con el ID especificado existe
-    const imagen = document.getElementById(imagenId);
-
-    if (imagen) {
-        // Cambia la fuente de la imagen según el modelo seleccionado
-        imagen.src = `img/${modelo.toLowerCase()}.jpg`;
-    } else {
-        console.error(`Elemento con ID ${imagenId} no encontrado.`);
-    }
-}
-
 function mostrarResultado(producto, modelo) {
     const resultadoDiv = document.getElementById('resultado');
-    resultadoDiv.innerHTML += `<p>Modelo: ${producto.modelo}</p>`;
+    const resultadoItem = document.createElement('div');
+    resultadoItem.classList.add('d-flex', 'flex-column', 'align-items-center');
 
-    // Agregar la imagen al resultado
-    resultadoDiv.innerHTML += `<img src="img/${modelo.toLowerCase()}.jpg" alt="${modelo}">`;
+    // Agregar el modelo al resultado
+    resultadoItem.innerHTML += `<p>Modelo: ${producto.modelo}</p>`;
+
+    // Crear un contenedor para el texto y la imagen
+    const modeloImagenContainer = document.createElement('div');
+    modeloImagenContainer.classList.add('d-flex', 'flex-column', 'align-items-center');
+
+    // Agregar la imagen al contenedor
+    modeloImagenContainer.innerHTML += `<img src="img/${modelo.toLowerCase()}.jpg" alt="${modelo}">`;
+
+    // Agregar el contenedor al resultadoItem
+    resultadoItem.appendChild(modeloImagenContainer);
+
+    // Agregar el nuevo resultadoItem al contenedor principal
+    resultadoDiv.appendChild(resultadoItem);
 }
 
 function crearProducto1() {
