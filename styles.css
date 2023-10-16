@@ -30,7 +30,7 @@ button {
 
 /* Agrega estas reglas para ajustar el tamaño de las imágenes al 50% */
 #resultado img {
-    width: 40%;
+    width: 30%;
 }
 
 #resultado > div {
