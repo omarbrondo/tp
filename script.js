@@ -15,6 +15,7 @@ class ProductoIpad {
 class IphoneFactoria {
     crearProducto(modelo) {
         console.log("Llamado de la clase IphoneFactoria, voy a crear el Iphone");
+        console.log("devuelvo a ProductoIphone el atributo " + modelo);
         return new ProductoIphone(modelo);
     }
 }
@@ -82,6 +83,7 @@ function crearProducto1() {
 
 function crearProducto2() {
     const modeloIpad = document.getElementById('ipadModel').value;
+    console.log("voy a crear el producto, declaro la variable modeloIpad y el modelo es: " + modeloIpad);
     const factoria = new AppleFactoria();
     console.log("Se creo una constante factoria del tipo AppleFactoria (para Ipad)");
     const ipad = factoria.obtenerIpad().crearProducto(modeloIpad);
