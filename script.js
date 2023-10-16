@@ -2,6 +2,7 @@ class ProductoIphone {
     constructor(modelo) {
         this.modelo = modelo;
         console.log("estoy en la clase ProductoIphone y llamo al contructor, le paso el modelo " + this.modelo);
+        
     }
 }
 
