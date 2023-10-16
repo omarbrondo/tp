@@ -89,3 +89,19 @@ function crearProducto2() {
     mostrarResultado(ipad, modeloIpad);
     console.log("Ipad Creado: IPad " + modeloIpad);
 }
+
+function mostrarDiagrama() {
+    // Tamaño de la ventana emergente
+    const ventanaAncho = 600;
+    const ventanaAlto = 400;
+
+    // Calcula la posición para centrar la ventana en la pantalla
+    const ventanaIzquierda = (window.innerWidth - ventanaAncho) / 2 + window.screenX;
+    const ventanaArriba = (window.innerHeight - ventanaAlto) / 2 + window.screenY;
+
+    // Abre la ventana emergente centrada
+    const ventanaEmergente = window.open('', 'Diagrama', `width=${ventanaAncho},height=${ventanaAlto},left=${ventanaIzquierda},top=${ventanaArriba}`);
+
+    // Añade una imagen a la ventana emergente
+    ventanaEmergente.document.write('<img src="img/diagrama.jpg" alt="Diagrama">');
+}
