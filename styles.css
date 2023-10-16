@@ -2,6 +2,14 @@
 
 body {
     font-family: 'Arial', sans-serif; /* Fallback en caso de que la fuente principal no se cargue */
+    background-color: blue; /* Color de fondo del cuerpo */
+}
+
+.container {
+    background-color: #e6dada; /* Color de fondo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del contenedor */
+    padding: 20px; /* Espaciado interno del contenedor */
+    border-radius: 10px; /* Bordes redondeados del contenedor */
 }
 
 h1, h2, h3 {
@@ -35,8 +43,8 @@ button {
 
 #resultado > div {
     border: 1px solid #ddd; /* Color del borde */
-    padding: 10px; /* Espaciado interno */
-    margin: 10px; /* Margen externo */
+    padding: 1px; /* Espaciado interno */
+    margin: 1px; /* Margen externo */
     border-radius: 5px; /* Bordes redondeados */
     background-color: #f9f9f9; /* Color de fondo gris claro */
 }
