@@ -36,7 +36,7 @@ button {
     justify-content: space-around;
 }
 
-/* Agrega estas reglas para ajustar el tamaño de las imágenes al 50% */
+
 #resultado img {
     width: 30%;
 }
@@ -49,5 +49,5 @@ button {
     background-color: #f9f9f9; /* Color de fondo gris claro */
 }
 
-/* Agrega el enlace a la fuente de Google Fonts al final del archivo CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');

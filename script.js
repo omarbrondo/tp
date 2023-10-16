@@ -51,11 +51,9 @@ class AppleFactoria {
 function mostrarResultado(producto, modelo) {
     const resultadoDiv = document.getElementById('resultado');
 
-    // Crear un nuevo contenedor para el resultadoItem
     const resultadoItem = document.createElement('div');
     resultadoItem.classList.add('d-flex', 'flex-column', 'align-items-center');
 
-    // Agregar el modelo al resultadoItem
     resultadoItem.innerHTML += `<p>Modelo: ${producto.modelo}</p>`;
 
     // Crear un contenedor para el texto y la imagen
