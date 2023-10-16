@@ -5,7 +5,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'SF Pro Display', sans-serif; /* Utiliza la fuente principal para h1, h2, h3 */
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente principal para h1, h2, h3 */
 }
 
 label {
@@ -40,3 +40,6 @@ button {
     border-radius: 5px; /* Bordes redondeados */
     background-color: #f9f9f9; /* Color de fondo gris claro */
 }
+
+/* Agrega el enlace a la fuente de Google Fonts al final del archivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
