@@ -29,6 +29,7 @@ class IpadFactoria {
 }
 
 class AppleFactoria {
+    
     constructor() {
         console.log("Llamado de la clase AppleFactoria");
         this.productoIphone = new IphoneFactoria();
